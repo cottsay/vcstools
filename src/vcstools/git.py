@@ -214,7 +214,7 @@ class GitClient(VcsClientBase):
                 return False
         return True
 
-    def update(self, version=None, verbose=False, force_fetch=False):
+    def update(self, version=None, verbose=False):
         """
         if version is None, attempts fast-forwarding current branch, if any.
 
