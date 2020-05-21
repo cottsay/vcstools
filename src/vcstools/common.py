@@ -319,7 +319,7 @@ def run_shell_command(cmd, cwd=None, shell=False, us_env=True,
                                  args=[proc, no_filter, verbose, show_stdout, q])
             t.start()
             t.join(timeout)
-            if t.isAlive():
+            if t.is_alive():
                 if hasattr(os.sys, 'winver'):
                     os.kill(proc.pid, signal.CTRL_BREAK_EVENT)
                 else:
